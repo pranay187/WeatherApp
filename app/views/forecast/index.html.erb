@@ -1,0 +1,11 @@
+<h2>Get Weather Forecast</h2>
+
+<%= form_tag forecast_show_path, method: :post do %>
+  <%= label_tag :address %>
+  <%= text_field_tag :address %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+<% if flash[:alert] %>
+  <p style="color: red;"><%= flash[:alert] %></p>
+<% end %>

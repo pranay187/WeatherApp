@@ -61,3 +61,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "httparty"
+gem "geocoder"
+gem "pry-rails"
+gem "sidekiq"
+gem "rspec-rails"

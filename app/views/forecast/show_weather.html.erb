@@ -1,0 +1,21 @@
+<h3>Weather Forecast</h3>
+
+<% if @forecast.present? %>
+  <p><strong>Location:</strong> <%= @forecast['name'] %></p>
+  <p><strong>Temperature Now:</strong> <%= @forecast['main']['temp'] %> °C</p>
+  <p><strong>Temperature High:</strong> <%= @forecast['main']['temp_max'] %> °C</p>
+  <p><strong>Temperature Low:</strong> <%= @forecast['main']['temp_min'] %> °C</p>
+  <p><strong>Weather Condition:</strong> <%= @forecast['weather'][0]['description'].capitalize %></p>
+
+  <% if @from_cache %>
+    <p style="color: green;"><em>From Cache: Yes</em></p>
+  <% else %>
+    <p style="color: blue;"><em>From Cache: No</em></p>
+  <% end %>
+<% else %>
+  <p style="color: red;">Weather data not available. Please try again later.</p>
+<% end %>
+
+<hr>
+
+<%= link_to 'Search another location', root_path, class: 'btn btn-secondary' %>
