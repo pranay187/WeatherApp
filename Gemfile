@@ -67,3 +67,4 @@ gem "geocoder"
 gem "pry-rails"
 gem "sidekiq"
 gem "rspec-rails"
+gem 'rails-controller-testing'
