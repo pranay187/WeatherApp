@@ -30,7 +30,7 @@ jobs:
 
       - name: Upload artifacts (screenshots & logs)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: test-artifacts
           path: |
@@ -39,7 +39,7 @@ jobs:
 
       - name: Upload test results as JUnit
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: rspec-results
           path: tmp/test-results.xml
